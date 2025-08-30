@@ -25,12 +25,10 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-        fetch-depth: 1
+          fetch-depth: 1
       - uses: dominikh/staticcheck-action@v1
         with:
-        version: "latest"
-
-
+          version: "latest"
       - name: Style
         run: test -z $(go fmt ./...)
 
