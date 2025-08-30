@@ -1,0 +1,14 @@
+name: Style
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  tests:
+    name: Style 
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Style Code 
+        run: test -z $(go fmt ./...)
